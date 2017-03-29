@@ -1,0 +1,69 @@
+{{ "<!-- Header -->" | safeHTML }}
+
+<header id="header">
+
+
+  <nav class="uk-navbar-container" uk-navbar>
+    <div class="uk-navbar-left">
+      <a href="" class="uk-navbar-toggle" uk-toggle="target: #offcanvas-nav"><span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span></a>
+      </div>
+    <div class="uk-navbar-center">
+
+        <a href="{{ .Site.BaseURL }}" class="uk-navbar-item uk-logo">Ninth Gear Dev</a>
+
+    </div>
+
+    <div class="uk-navbar-right">
+
+
+        {{ with .Site.Params.sidebar.googleplus }}
+    		<a href="//plus.google.com/+{{ . }}" target="_blank">Google Plus</a><
+    		{{ end }}
+    		{{ with .Site.Params.sidebar.facebook }}
+        <a class="uk-icon-button uk-margin-small-right" uk-icon="icon: facebook" href="//facebook.com/{{ . }}" target="_blank"></a>
+        {{ end }}
+    		{{ with .Site.Params.sidebar.twitter }}
+    		<a class="uk-icon-button uk-margin-small-right" uk-icon="icon: twitter" href="//twitter.com/{{ . }}" target="_blank"></a>
+    		{{ end }}
+    		{{ with .Site.Params.sidebar.github }}
+    		<a class="uk-icon-button uk-margin-small-right" uk-icon="icon: github" href="//github.com/{{ . }}" target="_blank"></a>
+    		{{ end }}
+    		{{ with .Site.Params.sidebar.linkedin }}
+    		<li><a href="{{ . }}" target="_blank" class="icon fa-linkedin-square"><span class="label">Linkedin</span></a></li>
+    		{{ end }}
+    		{{ with .Site.Params.sidebar.dribbble }}
+    		<li><a href="//dribbble.com/{{ . }}" target="_blank" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+    		{{ end }}
+    		{{ with .Site.Params.sidebar.flickr }}
+    		<li><a href="//flickr.com/photos/{{ . }}" target="_blank" class="icon fa-flickr"><span class="label">Flickr</span></a></li>
+    		{{ end }}
+    		{{ with .Site.Params.contact.email }}
+    		<a class="uk-icon-button uk-margin-small-right" uk-icon="icon: mail" href="{{ $.Site.BaseURL }}#contact-form" class="icon fa-envelope-o"></a>
+    		{{ end }}
+
+
+    </div>
+
+</nav>
+
+  {{ with .Site.Menus.main }}
+  <div id="offcanvas-nav" uk-offcanvas="mode: push; overlay: true;">
+    <div class="uk-offcanvas-bar">
+
+        <ul class="uk-nav uk-nav-default">
+          {{ range . }}
+            <li><a href="{{ .URL | absURL }}">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+
+    </div>
+</div>
+	{{ end }}
+  <div class="uk-section uk-section-primary">
+<div class="uk-container">
+	{{ with .Site.Params.sidebar.bio }}
+		<h1 class="text-shadow-pop-br">{{ . | markdownify }}</h1>
+	{{ end }}
+</div>
+</div>
+</header>

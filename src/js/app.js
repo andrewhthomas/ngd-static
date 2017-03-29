@@ -1,1 +1,8 @@
-// JS Goes here - ES6 supported
+import Jquery from 'jquery';
+import UIkit from 'uikit';
+import Icons from 'uikit/dist/js/uikit-icons';
+
+// loads the Icon plugin
+UIkit.use(Icons);
+
+// components can be called from the imported UIkit reference

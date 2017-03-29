@@ -1,0 +1,14 @@
+
+<section class="uk-section  uk-section-muted">
+  <div class="uk-container">
+<div class="uk-child-width-expand@s" uk-grid>
+  <div>hello</div>
+  <div>
+	<header class="major">
+		{{ with .Site.Params.about.title }}<h2 class="uk-heading-line">{{ . | markdownify }}</h2>{{ end }}
+	</header>
+	{{ with .Site.Params.about.content }}<p>{{ . | markdownify }}</p>{{ end }}
+</div>
+</div>
+</div>
+</section>

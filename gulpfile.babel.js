@@ -1,4 +1,5 @@
 import gulp from "gulp";
+import less from "gulp-less";
 import cp from "child_process";
 import gutil from "gulp-util";
 import postcss from "gulp-postcss";
@@ -19,7 +20,9 @@ gulp.task("build", ["css", "js", "hugo"]);
 gulp.task("build-preview", ["css", "js", "hugo-preview"]);
 
 gulp.task("css", () => (
-  gulp.src("./src/css/*.css")
+  gulp.src("./src/less/*.less")
+    .pipe(less())
+    .pipe(gulp.dest('./src/css'))
     .pipe(postcss([cssnext(), cssImport({from: "./src/css/main.css"})]))
     .pipe(gulp.dest("./dist/css"))
     .pipe(browserSync.stream())
@@ -46,7 +49,7 @@ gulp.task("server", ["hugo", "css", "js"], () => {
     }
   });
   gulp.watch("./src/js/**/*.js", ["js"]);
-  gulp.watch("./src/css/**/*.css", ["css"]);
+  gulp.watch("./src/less/**/*.less", ["css"]);
   gulp.watch("./site/**/*", ["hugo"]);
 });
 
