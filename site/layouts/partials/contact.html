@@ -1,58 +1,74 @@
 <!-- Three -->
-<section>
+<section class="uk-section">
+  <div class="uk-container">
 	{{ if isset .Site.Params.contact "email" }}
 		{{ with .Site.Params.contact.title }}<h2>{{ . }}</h2>{{ end }}
 		{{ with .Site.Params.contact.content }}<p>{{ . }}</p>{{ end }}
 	{{ end }}
 	<div class="row" id="contact-form">
 		{{ if (isset .Site.Params.contact "email") | and (gt (len .Site.Params.contact.email) 0) }}
-		<div class="8u 12u$(small)">
-			<form action="//formspree.io/{{ .Site.Params.contact.email }}" method="POST">
-				<div class="row uniform 50%">
+
+			<form class="uk-form-stacked uk-grid-small" action="//formspree.io/{{ .Site.Params.contact.email }}" method="POST" uk-grid>
+
 					<input type="hidden" name="_subject" value="New email from your portfolio" />
-					<div class="uk-margin"><input type="text" name="name" id="name" class="uk-input" placeholder="{{ .Site.Params.contact.form.name }}" required></div>
-					<div class="uk-margin"><input type="email" name="_replyto" name="email" id="email" class="uk-input" placeholder="{{ .Site.Params.contact.form.email }}" required/></div>
-					<div class="uk-margin"><textarea name="message" id="message" class="uk-textarea" placeholder="{{ .Site.Params.contact.form.message }}" rows="4" required></textarea></div>
-					<input type="text" name="_gotcha" style="display:none" />
+          <div class="uk-width-1-3">
+          <label class="uk-form-label">{{ .Site.Params.contact.form.nameFirst }}</label>
+					<div class="uk-form-controls"><input type="text" name="nameFirst" id="nameFirst" class="uk-input" placeholder="" required></div>
+          </div>
+          <div class="uk-width-1-3">
+            <label class="uk-form-label">{{ .Site.Params.contact.form.nameLast }}</label>
+					<input type="text" name="nameLast" id="nameLast" class="uk-input" placeholder="{{ .Site.Params.contact.form.nameLast }}" required>
+          </div>
+          <div class="uk-width-1-3">
+            <label class="uk-form-label">{{ .Site.Params.contact.form.organization }}</label>
+            <input type="text" name="organization" id="organization" class="uk-input" placeholder="{{ .Site.Params.contact.form.organization }}" required>
+          </div>
+          <div class="uk-width-1-3">
+            <label class="uk-form-label">{{ .Site.Params.contact.form.title }}</label>
+					<input type="text" name="title" id="title" class="uk-input" placeholder="{{ .Site.Params.contact.form.title }}" required>
+          </div>
+          <div class="uk-width-1-3">
+            <label class="uk-form-label">{{ .Site.Params.contact.form.email }}</label>
+					<input type="email" name="email" id="email" class="uk-input" placeholder="{{ .Site.Params.contact.form.email }}" required>
+          </div>
+          <div class="uk-width-1-3">
+            <label class="uk-form-label">{{ .Site.Params.contact.form.phone }}</label>
+            <input type="text" name="phone" id="phone" class="uk-input" placeholder="{{ .Site.Params.contact.form.phone }}" required>
+          </div>
+          <div class="uk-width-1-1">
+            <label class="uk-form-label">{{ .Site.Params.contact.form.how }}</label>
+					<input type="text" name="how" id="how" class="uk-input" placeholder="{{ .Site.Params.contact.form.how }}" required>
+          </div>
+          <div class="uk-width-1-1">
+            <label class="uk-form-label">{{ .Site.Params.contact.form.tell }}</label>
+					<textarea name="tell" id="tell" class="uk-textarea" placeholder="{{ .Site.Params.contact.form.tell }}" rows="4" required></textarea>
+          </div>
+          <div class="uk-width-1-3">
+            <label class="uk-form-label">{{ .Site.Params.contact.form.nameFirst }}</label>
+            <input type="text" name="budget" id="budget" class="uk-input" placeholder="{{ .Site.Params.contact.form.budget }}" required>
+          </div>
+          <div class="uk-width-1-3">
+            <label class="uk-form-label">{{ .Site.Params.contact.form.timeline }}</label>
+					<input type="text" name="timeline" id="timeline" class="uk-input" placeholder="{{ .Site.Params.contact.form.timeline }}" required/>
+          </div>
+          <div class="uk-width-1-1">
+            <label class="uk-form-label">{{ .Site.Params.contact.form.success }}</label>
+					<textarea name="success" id="success" class="uk-textarea" placeholder="{{ .Site.Params.contact.form.success }}" rows="4" required></textarea>
+        </div>
+        <input type="text" name="_gotcha" style="display:none" />
 
 
 						<input type="submit" class="uk-button uk-button-default" value="{{ .Site.Params.contact.form.submit }}" />
 
-				</div>
+
 			</form>
-		</div>
+
 		{{ else }}
-		<div class="8u 12u$(small)">&nbsp;</div>
+
 		{{ end }}
 		<div class="4u$ 12u$(small)">
-			<ul class="labeled-icons">
-				{{ if isset .Site.Params.contact "address" }}
-				<li>
-					<h3 class="icon fa-home"><span class="label"></span></h3>
-					{{ range .Site.Params.contact.address }}
-						{{ . }}<br />
-					{{ end}}
-				</li>
-				{{ end }}
-				{{ if isset .Site.Params.contact "phone" }}
-				<li>
-					<h3 class="icon fa-mobile"><span class="label"></span></h3>
-					{{ .Site.Params.contact.phone }}
-				</li>
-				{{ end }}
-				{{ if isset .Site.Params.contact "jabber" }}
-				<li>
-					<h3 class="icon fa fa-mobile"><span class="label"></span></h3>
-					<a href="#">{{ .Site.Params.contact.jabber }}</a>
-				</li>
-				{{ end }}
-				{{ if isset .Site.Params.contact "email" }}
-				<li>
-					<h3 class="icon fa-envelope-o"><span class="label"></span></h3>
-					<a href="#">{{ .Site.Params.contact.email }}</a>
-				</li>
-				{{ end }}
-			</ul>
+
 		</div>
+    </div>
 	</div>
 </section>

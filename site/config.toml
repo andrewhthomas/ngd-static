@@ -25,7 +25,7 @@ paginate = 10
 		# Replace the avatar with a picture of your own under static/images
 		avatar = "logo.png"
 		# Use Markdown to format the string. This works nearly all over the theme
-		bio = "**Let's build beautiful WordPress & Drupal sites together**"
+		bio = "Let's build beautiful **WordPress** & **Drupal** sites together"
 		# The icons will be shown if you enter your username
 		twitter = "ninthgeardev"
 		github = "ninthgeardev"
@@ -100,8 +100,8 @@ paginate = 10
 		content = "Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor."
 
 		address = [
-			"1234 Somewhere Rd.",
-			"Nashville, TN 00000",
+			"5123 Locust Street",
+			"Philadelphia, PA 19139",
 			"United States"
 		]
 		phone = "000-000-0000"
@@ -122,8 +122,14 @@ paginate = 10
 		[params.contact.form]
 			# Set custom strings for the form if your native
 			# language isn't English
-			name = "Name"
+			nameFirst = "First name"
+      nameLast = "Last name"
+      organization = "Organization"
+      title = "Title"
+      phone = "Phone"
 			email = "Email"
+      how = "How did you hear about us?"
+      tell = "Tell us about your project"
 			message = "Message"
 			submit = "Send message"
 
