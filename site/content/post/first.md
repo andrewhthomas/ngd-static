@@ -13,27 +13,41 @@ in fata [et parentes silvarum](http://www.morer.org/) in. In montibus ede?
 Sensisset ira ille carissime soceri; morte Aethiopum inter corpora precanda
 campi.
 
-    if (634671 <= dvd) {
-        node = newbie(viewKeyIos(intelligenceIpvKbps));
-        asciiOspfNetwork -= usEGif - 89;
-    } else {
-        minisite_service -= -2 - disk_emoticon_internet;
-    }
-    if (oopIcfWordart.scannerWebsite(bar + open_cisc.mirror(in, 4,
-            infringementWeb), click.vector_grayscale(encodingFileOutput,
-            superscalar))) {
-        server += logic;
-    }
-    if (hocProcess(supply_page_desktop, compiler_mirrored) +
-            keyloggerLeaderboardDisplay + service_power_pack) {
-        dvd += backup + rich_layout(icio);
-        parityWaisWhite = powerpoint_hashtag_parse + code_page - 3;
-    } else {
-        upCharacterBase.fpu_pinterest_network = drive_primary;
-        adwareInterpreterLog = 3;
-        consoleDriverPower(ppi_boot.aixIntelligence(ieeeMegabyte, kde, logic));
-    }
-    googleFrame += service;
+``` php
+<?php
+$fname     = mysql_real_escape_string($_GET["fname"]);
+$lname     = mysql_real_escape_string($_GET["lname"]);
+$company   = mysql_real_escape_string($_GET["company"]);
+$email     = mysql_real_escape_string($_GET["email"]);
+$datetime  = strtotime(now);
+$mysqldate = date('Y-m-d H:i:s', $datetime);
+
+if (!empty($fname) && !empty($lname) && !empty($email)) {
+
+  $sql = "INSERT INTO {scr_sai_register} (fname, lname, company, email, created) VALUES ('%s', '%s', '%s', '%s', '%s')";
+  $result = db_query($sql, $fname, $lname, $company, $email, $mysqldate);
+
+  // Save the data to the database
+  if ($result = true) {
+  // Tell the user that the SAI has been registered.
+    drupal_set_message(t('Thank you for registering the SAI. Please contact support if you encounter any issues.'));
+  // Print the values to the user
+  echo '<p>We have recorded the following information for your registration to the SAI:</p>';
+  echo '<p><strong>First Name:</strong> ' . $fname . '<br />';
+  echo '<strong>Last Name:</strong> ' . $lname . '<br />';
+  echo '<strong>Company:</strong> ' . $company . '<br />';
+  echo '<strong>E-mail:</strong> ' . $email . '</p>';
+  echo '<p>This entitles you to use the SAI on your workstation.</p>';
+
+  }
+  else { // If there's an error, $result will evaluate to FALSE, and the following code will execute.
+    drupal_set_message(t('There was an error saving your data. Please try again.'), 'error');
+  }
+}
+else {
+  echo '<p>Please contact a Scribe sales representative if you are interested in using the SAI.</p>';
+}
+```
 
 Plausit mundi? Ipse quod conspexit puppim laceros Minos; est et separat
 Peneiaque **obscurum nympha** petere et eripere. Reget milite natorumque fiet

@@ -39,7 +39,8 @@
     "postcss-cssnext": "^2.7.0",
     "postcss-import": "^8.1.2",
     "postcss-loader": "^0.9.1",
-    "uikit": "^3.0.0",
+    "pygments-css": "https://github.com/richleland/pygments-css.git",
+    "uikit": "3.0.0-beta.20",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.1",
     "whatwg-fetch": "^1.0.0"

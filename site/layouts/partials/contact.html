@@ -17,44 +17,51 @@
           </div>
           <div class="uk-width-1-3">
             <label class="uk-form-label">{{ .Site.Params.contact.form.nameLast }}</label>
-					<input type="text" name="nameLast" id="nameLast" class="uk-input" placeholder="{{ .Site.Params.contact.form.nameLast }}" required>
+					<input type="text" name="nameLast" id="nameLast" class="uk-input" placeholder="" required>
           </div>
           <div class="uk-width-1-3">
             <label class="uk-form-label">{{ .Site.Params.contact.form.organization }}</label>
-            <input type="text" name="organization" id="organization" class="uk-input" placeholder="{{ .Site.Params.contact.form.organization }}" required>
+            <input type="text" name="organization" id="organization" class="uk-input" placeholder="" required>
           </div>
           <div class="uk-width-1-3">
             <label class="uk-form-label">{{ .Site.Params.contact.form.title }}</label>
-					<input type="text" name="title" id="title" class="uk-input" placeholder="{{ .Site.Params.contact.form.title }}" required>
+					<input type="text" name="title" id="title" class="uk-input" placeholder="" required>
           </div>
           <div class="uk-width-1-3">
             <label class="uk-form-label">{{ .Site.Params.contact.form.email }}</label>
-					<input type="email" name="email" id="email" class="uk-input" placeholder="{{ .Site.Params.contact.form.email }}" required>
+					<input type="email" name="email" id="email" class="uk-input" placeholder="" required>
           </div>
           <div class="uk-width-1-3">
             <label class="uk-form-label">{{ .Site.Params.contact.form.phone }}</label>
-            <input type="text" name="phone" id="phone" class="uk-input" placeholder="{{ .Site.Params.contact.form.phone }}" required>
+            <input type="text" name="phone" id="phone" class="uk-input" placeholder="" required>
           </div>
           <div class="uk-width-1-1">
             <label class="uk-form-label">{{ .Site.Params.contact.form.how }}</label>
-					<input type="text" name="how" id="how" class="uk-input" placeholder="{{ .Site.Params.contact.form.how }}" required>
+					<input type="text" name="how" id="how" class="uk-input" placeholder="" required>
           </div>
           <div class="uk-width-1-1">
             <label class="uk-form-label">{{ .Site.Params.contact.form.tell }}</label>
-					<textarea name="tell" id="tell" class="uk-textarea" placeholder="{{ .Site.Params.contact.form.tell }}" rows="4" required></textarea>
+					<textarea name="tell" id="tell" class="uk-textarea" placeholder="" rows="4" required></textarea>
           </div>
           <div class="uk-width-1-3">
-            <label class="uk-form-label">{{ .Site.Params.contact.form.nameFirst }}</label>
-            <input type="text" name="budget" id="budget" class="uk-input" placeholder="{{ .Site.Params.contact.form.budget }}" required>
+            <label class="uk-form-label">{{ .Site.Params.contact.form.budget }}</label>
+            <input type="text" name="budget" id="budget" class="uk-input" placeholder="" required>
           </div>
           <div class="uk-width-1-3">
             <label class="uk-form-label">{{ .Site.Params.contact.form.timeline }}</label>
-					<input type="text" name="timeline" id="timeline" class="uk-input" placeholder="{{ .Site.Params.contact.form.timeline }}" required/>
+					<input type="text" name="timeline" id="timeline" class="uk-input" placeholder="" required/>
           </div>
           <div class="uk-width-1-1">
             <label class="uk-form-label">{{ .Site.Params.contact.form.success }}</label>
-					<textarea name="success" id="success" class="uk-textarea" placeholder="{{ .Site.Params.contact.form.success }}" rows="4" required></textarea>
+					<textarea name="success" id="success" class="uk-textarea" placeholder="" rows="4" required></textarea>
         </div>
+      <div class="uk-width-1-1">
+        <div class="uk-form-label">{{ .Site.Params.contact.form.contact }}</div>
+        <div class="uk-form-controls">
+            <label><input class="uk-radio" type="radio" name="radio1"> Option 01</label><br>
+            <label><input class="uk-radio" type="radio" name="radio1"> Option 02</label>
+        </div>
+    </div>
         <input type="text" name="_gotcha" style="display:none" />
 
 

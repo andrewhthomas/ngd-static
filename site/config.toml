@@ -6,7 +6,8 @@ disqusShortname = "spf13"
 googleAnalytics = ""
 # Define how many posts should appear on a site
 paginate = 10
-
+PygmentsCodeFences = true
+pygmentsuseclasses = true
 [params]
 	# To provide some metadata for search engines feel free to add a few
     # information about you and your website.
@@ -130,8 +131,12 @@ paginate = 10
 			email = "Email"
       how = "How did you hear about us?"
       tell = "Tell us about your project"
+      budget = "What's your budget for this work?"
+      timeline = "What's your timeline?"
 			message = "Message"
-			submit = "Send message"
+      success = "What would make your project a success?"
+      contact = "May we stay in touch?"
+			submit = "Send"
 
 
 # Menu links that appear on the left sidebar
@@ -150,8 +155,8 @@ paginate = 10
 	url  = "post/"
 	weight = 10
 
-  # Menu links that appear on the left sidebar
-  [[menu.secondary]]
-  	name = "Support"
-  	url  = "/"
-  	weight = 0
+# Menu links that appear on the left sidebar
+[[menu.secondary]]
+        name = "Support"
+        url  = "/"
+        weight = 0

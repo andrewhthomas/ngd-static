@@ -1,4 +1,13 @@
 {{ define "main" }}
+<div class="uk-background-fixed uk-background-blend-screen uk-background-primary uk-background-cover uk-panel uk-flex uk-flex-center uk-flex-middle" style="background-image: url(https://res.cloudinary.com/ninthgeardev/image/upload/v1490902131/martin-sattler-160751-min_aldbjd.jpg); height: 100vh">
+  <div class="uk-section">
+    <div class="uk-container">
+      {{ with .Site.Params.sidebar.bio }}
+      <h1 style="color: #ddd; font-size: 128px">{{ . | markdownify }}</h1>
+      {{ end }}
+    </div>
+  </div>
+</div>
 {{ if not .Site.Params.contact.hide }}
   {{ partial "contact" . }}
 {{ end }}
