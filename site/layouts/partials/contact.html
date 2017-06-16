@@ -8,74 +8,11 @@
 	<div class="row" id="contact-form">
 		{{ if (isset .Site.Params.contact "email") | and (gt (len .Site.Params.contact.email) 0) }}
 
-			<form class="uk-form-stacked uk-grid-small" action="//formspree.io/{{ .Site.Params.contact.email }}" method="POST" uk-grid>
-
-					<input type="hidden" name="_subject" value="New email from your portfolio" />
-          <div class="uk-width-1-3">
-          <label class="uk-form-label">{{ .Site.Params.contact.form.nameFirst }}</label>
-					<div class="uk-form-controls"><input type="text" name="nameFirst" id="nameFirst" class="uk-input" placeholder="" required></div>
-          </div>
-          <div class="uk-width-1-3">
-            <label class="uk-form-label">{{ .Site.Params.contact.form.nameLast }}</label>
-					<input type="text" name="nameLast" id="nameLast" class="uk-input" placeholder="" required>
-          </div>
-          <div class="uk-width-1-3">
-            <label class="uk-form-label">{{ .Site.Params.contact.form.organization }}</label>
-            <input type="text" name="organization" id="organization" class="uk-input" placeholder="" required>
-          </div>
-          <div class="uk-width-1-3">
-            <label class="uk-form-label">{{ .Site.Params.contact.form.title }}</label>
-					<input type="text" name="title" id="title" class="uk-input" placeholder="" required>
-          </div>
-          <div class="uk-width-1-3">
-            <label class="uk-form-label">{{ .Site.Params.contact.form.email }}</label>
-					<input type="email" name="email" id="email" class="uk-input" placeholder="" required>
-          </div>
-          <div class="uk-width-1-3">
-            <label class="uk-form-label">{{ .Site.Params.contact.form.phone }}</label>
-            <input type="text" name="phone" id="phone" class="uk-input" placeholder="" required>
-          </div>
-          <div class="uk-width-1-1">
-            <label class="uk-form-label">{{ .Site.Params.contact.form.how }}</label>
-					<input type="text" name="how" id="how" class="uk-input" placeholder="" required>
-          </div>
-          <div class="uk-width-1-1">
-            <label class="uk-form-label">{{ .Site.Params.contact.form.tell }}</label>
-					<textarea name="tell" id="tell" class="uk-textarea" placeholder="" rows="4" required></textarea>
-          </div>
-          <div class="uk-width-1-3">
-            <label class="uk-form-label">{{ .Site.Params.contact.form.budget }}</label>
-            <input type="text" name="budget" id="budget" class="uk-input" placeholder="" required>
-          </div>
-          <div class="uk-width-1-3">
-            <label class="uk-form-label">{{ .Site.Params.contact.form.timeline }}</label>
-					<input type="text" name="timeline" id="timeline" class="uk-input" placeholder="" required/>
-          </div>
-          <div class="uk-width-1-1">
-            <label class="uk-form-label">{{ .Site.Params.contact.form.success }}</label>
-					<textarea name="success" id="success" class="uk-textarea" placeholder="" rows="4" required></textarea>
-        </div>
-      <div class="uk-width-1-1">
-        <div class="uk-form-label">{{ .Site.Params.contact.form.contact }}</div>
-        <div class="uk-form-controls">
-            <label><input class="uk-radio" type="radio" name="radio1"> Option 01</label><br>
-            <label><input class="uk-radio" type="radio" name="radio1"> Option 02</label>
-        </div>
-    </div>
-        <input type="text" name="_gotcha" style="display:none" />
-
-
-						<input type="submit" class="uk-button uk-button-default" value="{{ .Site.Params.contact.form.submit }}" />
-
-
-			</form>
+			<a class="typeform-share button" href="https://ninthgeardev.typeform.com/to/BUVkoI" data-mode="popup" style="display:inline-block;text-decoration:none;background-color:#f46353;color:white;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:32px;line-height:80px;text-align:center;margin:0;height:80px;padding:0px 53px;border-radius:0px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;" data-hide-headers=true data-hide-footer=true target="_blank">Want to get started? </a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
 
 		{{ else }}
 
 		{{ end }}
-		<div class="4u$ 12u$(small)">
-
-		</div>
     </div>
 	</div>
 </section>

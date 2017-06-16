@@ -11,28 +11,35 @@
       <a href="{{ .Site.BaseURL }}" class="uk-navbar-item uk-logo">Ninth Gear Dev</a>
     </div>
 
-    <div class="uk-navbar-right">
+    <div class="uk-navbar-right uk-visible@m">
       {{ with .Site.Params.sidebar.googleplus }}
       <a href="//plus.google.com/+{{ . }}" target="_blank">Google Plus</a>
-      < {{ end }} {{ with .Site.Params.sidebar.facebook }} <a class="uk-icon-button uk-margin-small-right" uk-icon="icon: facebook" href="//facebook.com/{{ . }}" target="_blank"></a>
-        {{ end }} {{ with .Site.Params.sidebar.twitter }}
-        <a class="uk-icon-button uk-margin-small-right" uk-icon="icon: twitter" href="//twitter.com/{{ . }}" target="_blank"></a>
-        {{ end }} {{ with .Site.Params.sidebar.github }}
-        <a class="uk-icon-button uk-margin-small-right" uk-icon="icon: github" href="//github.com/{{ . }}" target="_blank"></a>
-        {{ end }} {{ with .Site.Params.sidebar.linkedin }}
-        <li><a href="{{ . }}" target="_blank" class="icon fa-linkedin-square"><span class="label">Linkedin</span></a></li>
-        {{ end }} {{ with .Site.Params.sidebar.dribbble }}
-        <li><a href="//dribbble.com/{{ . }}" target="_blank" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-        {{ end }} {{ with .Site.Params.sidebar.flickr }}
-        <li><a href="//flickr.com/photos/{{ . }}" target="_blank" class="icon fa-flickr"><span class="label">Flickr</span></a></li>
-        {{ end }}
+      {{ end }}
+      {{ with .Site.Params.sidebar.facebook }}
+      <a class="uk-icon-button uk-margin-small-right" uk-icon="icon: facebook" href="//facebook.com/{{ . }}" target="_blank"></a>
+      {{ end }}
+      {{ with .Site.Params.sidebar.twitter }}
+      <a class="uk-icon-button uk-margin-small-right" uk-icon="icon: twitter" href="//twitter.com/{{ . }}" target="_blank"></a>
+      {{ end }}
+      {{ with .Site.Params.sidebar.github }}
+      <a class="uk-icon-button uk-margin-small-right" uk-icon="icon: github" href="//github.com/{{ . }}" target="_blank"></a>
+      {{ end }}
+      {{ with .Site.Params.sidebar.linkedin }}
+      <a href="{{ . }}" target="_blank" class="icon fa-linkedin-square"><span class="label">Linkedin</span></a>
+      {{ end }}
+      {{ with .Site.Params.sidebar.dribbble }}
+      <a href="//dribbble.com/{{ . }}" target="_blank" class="icon fa-dribbble"><span class="label">Dribbble</span></a>
+      {{ end }}
+      {{ with .Site.Params.sidebar.flickr }}
+      <a href="//flickr.com/photos/{{ . }}" target="_blank" class="icon fa-flickr"><span class="label">Flickr</span></a>
+      {{ end }}
     </div>
   </nav>
 
   {{ with .Site.Menus.main }}
   <div id="offcanvas-nav" uk-offcanvas="mode: push; overlay: true;">
     <div class="uk-offcanvas-bar">
-      <ul class="uk-nav uk-nav-default">
+      <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
         {{ range . }}
         <li><a href="{{ .URL | absURL }}">{{ .Name }}</a></li>
         {{ end }}
